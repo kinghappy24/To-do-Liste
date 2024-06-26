@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-Liste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TODO-Liste</h1>
+        <div class="todo-form">
+            <input type="text" id="title" placeholder="Titel (max. 255 Zeichen)" maxlength="255" required>
+            <input type="text" id="description" placeholder="Beschreibung">
+            <input type="text" id="author" placeholder="Autor (max. 20 Zeichen)" maxlength="20" required>
+            <select id="category">
+                <option value="Sport">Sport</option>
+                <option value="Reisen">Reisen</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Arbeit">Arbeit</option>
+            </select>
+            <div>
+                <label><input type="checkbox" id="important"> Wichtig</label>
+                <label><input type="checkbox" id="urgent"> Dringend</label>
+            </div>
+            <input type="date" id="startDate" placeholder="Startdatum">
+            <input type="date" id="endDate" placeholder="Enddatum">
+            <input type="number" id="progress" placeholder="Prozentsatz" min="0" max="100">
+            <button onclick="addTodo()">Hinzufügen</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="TODO's suchen" oninput="searchTodos()">
+        </div>
+        <div class="todo-list" id="todoList">
+            <!-- TODOs werden hier angezeigt -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
